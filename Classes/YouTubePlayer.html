@@ -1,0 +1,2430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>YouTubePlayer Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/YouTubePlayer" class="dashAnchor"></a>
+    <a title="YouTubePlayer Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        YouTubePlayer Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer.html">YouTubePlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer/Perspective360Degree.html">– Perspective360Degree</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer/PlaybackQuality.html">– PlaybackQuality</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer/PlaybackState.html">– PlaybackState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer/PreferenceKey.html">– PreferenceKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer/Source.html">– Source</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayerViewController.html">YouTubePlayerViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/YouTubePlayer360DegreePerspectiveAPI.html">YouTubePlayer360DegreePerspectiveAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/YouTubePlayerConfigurationAPI.html">YouTubePlayerConfigurationAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/YouTubePlayerEventAPI.html">YouTubePlayerEventAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/YouTubePlayerLoadAPI.html">YouTubePlayerLoadAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/YouTubePlayerPlaybackAPI.html">YouTubePlayerPlaybackAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/YouTubePlayerPlaybackRateAPI.html">YouTubePlayerPlaybackRateAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/YouTubePlayerPlaylistAPI.html">YouTubePlayerPlaylistAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/YouTubePlayerVideoAPI.html">YouTubePlayerVideoAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/YouTubePlayerVideoInformationAPI.html">YouTubePlayerVideoInformationAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/YouTubePlayerVolumeAPI.html">YouTubePlayerVolumeAPI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/YouTubePlayerView.html">YouTubePlayerView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:16YouTubePlayerKit0abC3APIa">YouTubePlayerAPI</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>YouTubePlayer</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">YouTubePlayer</span> <span class="p">:</span> <span class="kt">ObservableObject</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YouTubePlayerConfigurationAPI.html">YouTubePlayerConfigurationAPI</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YouTubePlayerLoadAPI.html">YouTubePlayerLoadAPI</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YouTubePlayerEventAPI.html">YouTubePlayerEventAPI</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YouTubePlayerVideoAPI.html">YouTubePlayerVideoAPI</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YouTubePlayer360DegreePerspectiveAPI.html">YouTubePlayer360DegreePerspectiveAPI</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YouTubePlayerPlaylistAPI.html">YouTubePlayerPlaylistAPI</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YouTubePlayerVolumeAPI.html">YouTubePlayerVolumeAPI</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YouTubePlayerPlaybackRateAPI.html">YouTubePlayerPlaybackRateAPI</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YouTubePlayerPlaybackAPI.html">YouTubePlayerPlaybackAPI</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt"><a href="../Protocols/YouTubePlayerVideoInformationAPI.html">YouTubePlayerVideoInformationAPI</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt">ExpressibleByStringLiteral</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">YouTubePlayer</span><span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                </div>
+              </div>
+            <p>A YouTubePlayer</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Properties"></a>
+                  <h3 class="section-name"><p>Properties</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C6sourceAC6SourceOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/source" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C6sourceAC6SourceOSgvp">source</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The optional YouTubePlayer Source</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@Published</span>
+<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">source</span><span class="p">:</span> <span class="kt"><a href="../Classes/YouTubePlayer/Source.html">Source</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C13configurationAC13ConfigurationVvp"></a>
+                    <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C13configurationAC13ConfigurationVvp">configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YouTubePlayer Configuration</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@Published</span>
+<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/YouTubePlayer/Configuration.html">Configuration</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializer"></a>
+                <a name="//apple_ref/swift/Section/Initializer" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initializer"></a>
+                  <h3 class="section-name"><p>Initializer</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C6source13configurationA2C6SourceOSg_AC13ConfigurationVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(source:configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C6source13configurationA2C6SourceOSg_AC13ConfigurationVtcfc">init(source:<wbr>configuration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new instance of <code>YouTubePlayer</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">source</span><span class="p">:</span> <span class="kt"><a href="../Classes/YouTubePlayer/Source.html">Source</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/YouTubePlayer/Configuration.html">Configuration</a></span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">()</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>source</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The optional YouTubePlayer Source. Default value <code>nil</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The YouTubePlayer Configuration. Default value <code>.init()</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BConfiguration"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+Configuration" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BConfiguration"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+Configuration</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C13ConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/Configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C13ConfigurationV">Configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A YouTube Player Configuration</p>
+
+<ul>
+<li>Read more: <a href="https://developers.google.com/youtube/player_parameters">https://developers.google.com/youtube/player_parameters</a></li>
+</ul>
+
+                        <a href="../Classes/YouTubePlayer/Configuration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Configuration</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt"><a href="../Classes/YouTubePlayer.html">YouTubePlayer</a></span><span class="o">.</span><span class="kt">Configuration</span><span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BError"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+Error" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BError"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+Error</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C5ErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C5ErrorO">Error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YouTubePlayer Error</p>
+
+                        <a href="../Classes/YouTubePlayer/Error.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Error</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">CaseIterable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BPerspective360Degree"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+Perspective360Degree" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BPerspective360Degree"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+Perspective360Degree</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C20Perspective360DegreeV"></a>
+                    <a name="//apple_ref/swift/Struct/Perspective360Degree" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C20Perspective360DegreeV">Perspective360Degree</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The 360° YouTube player video playback perspective configuration</p>
+
+                        <a href="../Classes/YouTubePlayer/Perspective360Degree.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Perspective360Degree</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BPlaybackQuality"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+PlaybackQuality" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BPlaybackQuality"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+PlaybackQuality</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C15PlaybackQualityO"></a>
+                    <a name="//apple_ref/swift/Enum/PlaybackQuality" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C15PlaybackQualityO">PlaybackQuality</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YouTubePlayer PlaybackQuality</p>
+
+                        <a href="../Classes/YouTubePlayer/PlaybackQuality.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">PlaybackQuality</span> <span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">CaseIterable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BPlaybackRate"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+PlaybackRate" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BPlaybackRate"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+PlaybackRate</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C12PlaybackRatea"></a>
+                    <a name="//apple_ref/swift/Alias/PlaybackRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C12PlaybackRatea">PlaybackRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YouTubePlayer PlaybackRate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">PlaybackRate</span> <span class="o">=</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BPlaybackState"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+PlaybackState" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BPlaybackState"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+PlaybackState</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C13PlaybackStateO"></a>
+                    <a name="//apple_ref/swift/Enum/PlaybackState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C13PlaybackStateO">PlaybackState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YouTubePlayer PlaybackState</p>
+
+                        <a href="../Classes/YouTubePlayer/PlaybackState.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">PlaybackState</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BPreferenceKey"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+PreferenceKey" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BPreferenceKey"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+PreferenceKey</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C13PreferenceKeyV"></a>
+                    <a name="//apple_ref/swift/Struct/PreferenceKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C13PreferenceKeyV">PreferenceKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A YouTubePlayer  produced by a SwiftUI view</p>
+
+                        <a href="../Classes/YouTubePlayer/PreferenceKey.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">PreferenceKey</span> <span class="p">:</span> <span class="kt">SwiftUI</span><span class="o">.</span><span class="kt">PreferenceKey</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BSource"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+Source" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BSource"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+Source</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C6SourceO"></a>
+                    <a name="//apple_ref/swift/Enum/Source" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C6SourceO">Source</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YouTubePlayer Source</p>
+
+                        <a href="../Classes/YouTubePlayer/Source.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Source</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt"><a href="../Classes/YouTubePlayer.html">YouTubePlayer</a></span><span class="o">.</span><span class="kt">Source</span><span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BState"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+State" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BState"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+State</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C5StateO"></a>
+                    <a name="//apple_ref/swift/Enum/State" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C5StateO">State</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YouTubePlayer State</p>
+
+                        <a href="../Classes/YouTubePlayer/State.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">State</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayerConfigurationAPI"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayerConfigurationAPI" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayerConfigurationAPI"></a>
+                  <h3 class="section-name"><p>YouTubePlayerConfigurationAPI</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C6update13configurationyAC13ConfigurationV_tF"></a>
+                    <a name="//apple_ref/swift/Method/update(configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C6update13configurationyAC13ConfigurationV_tF">update(configuration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update YouTubePlayer Configuration</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Updating the Configuration will result in a reload of the entire YouTubePlayer
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span>
+    <span class="nv">configuration</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/Configuration.html">Configuration</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The YouTubePlayer Configuration</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayerLoadAPI"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayerLoadAPI" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayerLoadAPI"></a>
+                  <h3 class="section-name"><p>YouTubePlayerLoadAPI</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C4load6sourceyAC6SourceOSg_tF"></a>
+                    <a name="//apple_ref/swift/Method/load(source:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C4load6sourceyAC6SourceOSg_tF">load(source:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Load YouTubePlayer Source</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">load</span><span class="p">(</span>
+    <span class="nv">source</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/Source.html">Source</a></span><span class="p">?</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>source</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The YouTubePlayer Source to load</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayerEventAPI"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayerEventAPI" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayerEventAPI"></a>
+                  <h3 class="section-name"><p>YouTubePlayerEventAPI</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C5stateAC5StateOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C5stateAC5StateOSgvp">state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current YouTubePlayer State, if available</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/State.html">State</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C14statePublisher7Combine03AnyF0VyAC5StateOs5NeverOGvp"></a>
+                    <a name="//apple_ref/swift/Property/statePublisher" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C14statePublisher7Combine03AnyF0VyAC5StateOs5NeverOGvp">statePublisher</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Publisher that emits the current YouTubePlayer State</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">statePublisher</span><span class="p">:</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/State.html">State</a></span><span class="p">,</span> <span class="kt">Never</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C13playbackStateAC08PlaybackF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/playbackState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C13playbackStateAC08PlaybackF0OSgvp">playbackState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current YouTubePlayer PlaybackState, if available</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playbackState</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/PlaybackState.html">PlaybackState</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C22playbackStatePublisher7Combine03AnyG0VyAC08PlaybackF0Os5NeverOGvp"></a>
+                    <a name="//apple_ref/swift/Property/playbackStatePublisher" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C22playbackStatePublisher7Combine03AnyG0VyAC08PlaybackF0Os5NeverOGvp">playbackStatePublisher</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Publisher that emits the current YouTubePlayer PlaybackState</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playbackStatePublisher</span><span class="p">:</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/PlaybackState.html">PlaybackState</a></span><span class="p">,</span> <span class="kt">Never</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C15playbackQualityAC08PlaybackF0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/playbackQuality" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C15playbackQualityAC08PlaybackF0OSgvp">playbackQuality</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current YouTubePlayer PlaybackQuality, if available</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playbackQuality</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/PlaybackQuality.html">PlaybackQuality</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C24playbackQualityPublisher7Combine03AnyG0VyAC08PlaybackF0Os5NeverOGvp"></a>
+                    <a name="//apple_ref/swift/Property/playbackQualityPublisher" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C24playbackQualityPublisher7Combine03AnyG0VyAC08PlaybackF0Os5NeverOGvp">playbackQualityPublisher</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Publisher that emits the current YouTubePlayer PlaybackQuality</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playbackQualityPublisher</span><span class="p">:</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/PlaybackQuality.html">PlaybackQuality</a></span><span class="p">,</span> <span class="kt">Never</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C12playbackRateSdSgvp"></a>
+                    <a name="//apple_ref/swift/Property/playbackRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C12playbackRateSdSgvp">playbackRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current YouTubePlayer PlaybackRate, if available</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playbackRate</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer.html#/s:16YouTubePlayerKit0abC0C12PlaybackRatea">PlaybackRate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C21playbackRatePublisher7Combine03AnyG0VySds5NeverOGvp"></a>
+                    <a name="//apple_ref/swift/Property/playbackRatePublisher" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C21playbackRatePublisher7Combine03AnyG0VySds5NeverOGvp">playbackRatePublisher</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Publisher that emits the current YouTubePlayer PlaybackRate</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">playbackRatePublisher</span><span class="p">:</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer.html#/s:16YouTubePlayerKit0abC0C12PlaybackRatea">PlaybackRate</a></span><span class="p">,</span> <span class="kt">Never</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayerVideoAPI"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayerVideoAPI" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayerVideoAPI"></a>
+                  <h3 class="section-name"><p>YouTubePlayerVideoAPI</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C4playyyF"></a>
+                    <a name="//apple_ref/swift/Method/play()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C4playyyF">play()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Plays the currently cued/loaded video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">play</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C5pauseyyF"></a>
+                    <a name="//apple_ref/swift/Method/pause()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C5pauseyyF">pause()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pauses the currently playing video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pause</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C4stopyyF"></a>
+                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C4stopyyF">stop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops and cancels loading of the current video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C4seek2to14allowSeekAheadySd_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/seek(to:allowSeekAhead:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C4seek2to14allowSeekAheadySd_SbtF">seek(to:<wbr>allowSeekAhead:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Seeks to a specified time in the video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">seek</span><span class="p">(</span>
+    <span class="n">to</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
+    <span class="nv">allowSeekAhead</span><span class="p">:</span> <span class="kt">Bool</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>seconds</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The seconds parameter identifies the time to which the player should advance</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowSeekAhead</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Determines whether the player will make a new request to the server</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer360DegreePerspectiveAPI"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer360DegreePerspectiveAPI" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer360DegreePerspectiveAPI"></a>
+                  <h3 class="section-name"><p>YouTubePlayer360DegreePerspectiveAPI</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C23get360DegreePerspective10completionyys6ResultOyAC014Perspective360F0VAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/get360DegreePerspective(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C23get360DegreePerspective10completionyys6ResultOyAC014Perspective360F0VAA0abC8APIErrorVGc_tF">get360DegreePerspective(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves properties that describe the viewer&rsquo;s current perspective</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">get360DegreePerspective</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/Perspective360Degree.html">Perspective360Degree</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C3set20perspective360DegreeyAC014Perspective360G0V_tF"></a>
+                    <a name="//apple_ref/swift/Method/set(perspective360Degree:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C3set20perspective360DegreeyAC014Perspective360G0V_tF">set(perspective360Degree:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the video orientation for playback of a 360° video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span>
+    <span class="nv">perspective360Degree</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/Perspective360Degree.html">Perspective360Degree</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>perspective360Degree</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Perspective360Degree</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayerPlaylistAPI"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayerPlaylistAPI" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayerPlaylistAPI"></a>
+                  <h3 class="section-name"><p>YouTubePlayerPlaylistAPI</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C9nextVideoyyF"></a>
+                    <a name="//apple_ref/swift/Method/nextVideo()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C9nextVideoyyF">nextVideo()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function loads and plays the next video in the playlist</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">nextVideo</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C13previousVideoyyF"></a>
+                    <a name="//apple_ref/swift/Method/previousVideo()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C13previousVideoyyF">previousVideo()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function loads and plays the previous video in the playlist</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">previousVideo</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C9playVideo2atySi_tF"></a>
+                    <a name="//apple_ref/swift/Method/playVideo(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C9playVideo2atySi_tF">playVideo(at:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function loads and plays the specified video in the playlist</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">playVideo</span><span class="p">(</span>
+    <span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The index of the video that you want to play in the playlist</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C7setLoop7enabledySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/setLoop(enabled:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C7setLoop7enabledySb_tF">setLoop(enabled:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function indicates whether the video player should continuously play a playlist
+or if it should stop playing after the last video in the playlist ends</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setLoop</span><span class="p">(</span>
+    <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>enabled</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bool value if is enabled</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C10setShuffle7enabledySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/setShuffle(enabled:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C10setShuffle7enabledySb_tF">setShuffle(enabled:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function indicates whether a playlist&rsquo;s videos should be shuffled
+so that they play back in an order different from the one that the playlist creator designated</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setShuffle</span><span class="p">(</span>
+    <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>enabled</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bool value if is enabled</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C11getPlaylist10completionyys6ResultOySaySSGAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getPlaylist(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C11getPlaylist10completionyys6ResultOySaySSGAA0abC8APIErrorVGc_tF">getPlaylist(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function returns an array of the video IDs in the playlist as they are currently ordered</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPlaylist</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C15getPlayistIndex10completionyys6ResultOySiAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getPlayistIndex(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C15getPlayistIndex10completionyys6ResultOySiAA0abC8APIErrorVGc_tF">getPlayistIndex(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function returns the index of the playlist video that is currently playing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPlayistIndex</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayerVolumeAPI"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayerVolumeAPI" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayerVolumeAPI"></a>
+                  <h3 class="section-name"><p>YouTubePlayerVolumeAPI</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C4muteyyF"></a>
+                    <a name="//apple_ref/swift/Method/mute()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C4muteyyF">mute()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Mutes the player</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mute</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C6unmuteyyF"></a>
+                    <a name="//apple_ref/swift/Method/unmute()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C6unmuteyyF">unmute()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unmutes the player</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unmute</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C7isMuted10completionyys6ResultOySbAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/isMuted(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C7isMuted10completionyys6ResultOySbAA0abC8APIErrorVGc_tF">isMuted(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns Bool value if the player is muted</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isMuted</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Bool</span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C9getVolume10completionyys6ResultOySiAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getVolume(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C9getVolume10completionyys6ResultOySiAA0abC8APIErrorVGc_tF">getVolume(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the player&rsquo;s current volume, an integer between 0 and 100</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getVolume</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C3set6volumeySi_tF"></a>
+                    <a name="//apple_ref/swift/Method/set(volume:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C3set6volumeySi_tF">set(volume:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the volume.
+Accepts an integer between 0 and 100</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span>
+    <span class="nv">volume</span><span class="p">:</span> <span class="kt">Int</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>volume</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The volume</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayerPlaybackRateAPI"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayerPlaybackRateAPI" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayerPlaybackRateAPI"></a>
+                  <h3 class="section-name"><p>YouTubePlayerPlaybackRateAPI</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C15getPlaybackRate10completionyys6ResultOySdAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getPlaybackRate(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C15getPlaybackRate10completionyys6ResultOySdAA0abC8APIErrorVGc_tF">getPlaybackRate(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function retrieves the playback rate of the currently playing video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPlaybackRate</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer.html#/s:16YouTubePlayerKit0abC0C12PlaybackRatea">PlaybackRate</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C3set12playbackRateySd_tF"></a>
+                    <a name="//apple_ref/swift/Method/set(playbackRate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C3set12playbackRateySd_tF">set(playbackRate:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function sets the suggested playback rate for the current video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span>
+    <span class="nv">playbackRate</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer.html#/s:16YouTubePlayerKit0abC0C12PlaybackRatea">PlaybackRate</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>playbackRate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The playback rate</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C25getAvailablePlaybackRates10completionyys6ResultOySaySdGAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getAvailablePlaybackRates(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C25getAvailablePlaybackRates10completionyys6ResultOySaySdGAA0abC8APIErrorVGc_tF">getAvailablePlaybackRates(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This function returns the set of playback rates in which the current video is available</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getAvailablePlaybackRates</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer.html#/s:16YouTubePlayerKit0abC0C12PlaybackRatea">PlaybackRate</a></span><span class="p">],</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayerPlaybackAPI"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayerPlaybackAPI" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayerPlaybackAPI"></a>
+                  <h3 class="section-name"><p>YouTubePlayerPlaybackAPI</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C22getVideoLoadedFraction10completionyys6ResultOySdAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getVideoLoadedFraction(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C22getVideoLoadedFraction10completionyys6ResultOySdAA0abC8APIErrorVGc_tF">getVideoLoadedFraction(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a number between 0 and 1 that specifies the percentage of the video that the player shows as buffered</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getVideoLoadedFraction</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Double</span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C16getPlaybackState10completionyys6ResultOyAC0fG0OAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getPlaybackState(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C16getPlaybackState10completionyys6ResultOyAC0fG0OAA0abC8APIErrorVGc_tF">getPlaybackState(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the PlaybackState of the player video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPlaybackState</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/PlaybackState.html">PlaybackState</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C14getCurrentTime10completionyys6ResultOySiAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getCurrentTime(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C14getCurrentTime10completionyys6ResultOySiAA0abC8APIErrorVGc_tF">getCurrentTime(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the elapsed time in seconds since the video started playing</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getCurrentTime</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayerVideoInformationAPI"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayerVideoInformationAPI" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayerVideoInformationAPI"></a>
+                  <h3 class="section-name"><p>YouTubePlayerVideoInformationAPI</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C11getDuration10completionyys6ResultOySiAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getDuration(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C11getDuration10completionyys6ResultOySiAA0abC8APIErrorVGc_tF">getDuration(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the duration in seconds of the currently playing video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getDuration</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C11getVideoURL10completionyys6ResultOySSAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getVideoURL(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C11getVideoURL10completionyys6ResultOySSAA0abC8APIErrorVGc_tF">getVideoURL(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the YouTube.com URL for the currently loaded/playing video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getVideoURL</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C17getVideoEmbedCode10completionyys6ResultOySSAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getVideoEmbedCode(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C17getVideoEmbedCode10completionyys6ResultOySSAA0abC8APIErrorVGc_tF">getVideoEmbedCode(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the embed code for the currently loaded/playing video</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getVideoEmbedCode</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ExpressibleByStringLiteral"></a>
+                <a name="//apple_ref/swift/Section/ExpressibleByStringLiteral" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/ExpressibleByStringLiteral"></a>
+                  <h3 class="section-name"><p>ExpressibleByStringLiteral</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C13stringLiteralACSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(stringLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C13stringLiteralACSS_tcfc">init(stringLiteral:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an instance initialized to the given string value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="n">stringLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value of the new instance</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Equatable"></a>
+                <a name="//apple_ref/swift/Section/Equatable" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Equatable"></a>
+                  <h3 class="section-name"><p>Equatable</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C2eeoiySbAC_ACtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C2eeoiySbAC_ACtFZ">==(_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a Boolean value indicating whether two values are equal.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span>
+    <span class="nv">lhs</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="p">,</span>
+    <span class="nv">rhs</span><span class="p">:</span> <span class="kt">YouTubePlayer</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value to compare.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Another value to compare.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

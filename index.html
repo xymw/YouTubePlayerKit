@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/YouTubePlayer.html">YouTubePlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/YouTubePlayer/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/YouTubePlayer/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/YouTubePlayer/Perspective360Degree.html">– Perspective360Degree</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/YouTubePlayer/PlaybackQuality.html">– PlaybackQuality</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/YouTubePlayer/PlaybackState.html">– PlaybackState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/YouTubePlayer/PreferenceKey.html">– PreferenceKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/YouTubePlayer/Source.html">– Source</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/YouTubePlayer/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/YouTubePlayerViewController.html">YouTubePlayerViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayer360DegreePerspectiveAPI.html">YouTubePlayer360DegreePerspectiveAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayerConfigurationAPI.html">YouTubePlayerConfigurationAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayerEventAPI.html">YouTubePlayerEventAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayerLoadAPI.html">YouTubePlayerLoadAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayerPlaybackAPI.html">YouTubePlayerPlaybackAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayerPlaybackRateAPI.html">YouTubePlayerPlaybackRateAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayerPlaylistAPI.html">YouTubePlayerPlaylistAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayerVideoAPI.html">YouTubePlayerVideoAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayerVideoInformationAPI.html">YouTubePlayerVideoInformationAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayerVolumeAPI.html">YouTubePlayerVolumeAPI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/YouTubePlayerView.html">YouTubePlayerView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:16YouTubePlayerKit0abC3APIa">YouTubePlayerAPI</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><br/></p>
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/SvenTiigi/YouTubePlayerKit/gh-pages/readme-assets/logo.png?token=ACZQQFS3DO5PMLZUDKA3VT3BKHYS4" width="30%" alt="logo">
+</p>
+
+<h1 align="center">YouTubePlayerKit</h1>
+
+<p align="center">
+    A Swift Package to easily play YouTube videos on iOS
+</p>
+
+<p align="center">
+   <a href="https://github.com/apple/swift-package-manager">
+      <img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="SPM">
+   </a>
+   <a href="https://twitter.com/SvenTiigi/">
+      <img src="https://img.shields.io/badge/Twitter-@SvenTiigi-blue.svg?style=flat" alt="Twitter">
+   </a>
+</p>
+
+<p><img align="right" width="307" src="https://raw.githubusercontent.com/SvenTiigi/YouTubePlayerKit/gh-pages/readme-assets/example-app.png?token=ACZQQFQCQOW4BAQ5BX3Q4Q3BKLRI2" alt="Example application"></p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+<span class="kd">import</span> <span class="kt">YouTubePlayerKit</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="c1">//  WWDC 2019 Keynote</span>
+        <span class="kt">YouTubePlayerView</span><span class="p">(</span>
+            <span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>[x] Play YouTube videos with just one line of code 📺</li>
+<li>[x] YouTube <a href="https://youtube.com/t/terms">Terms of Service</a> compliant implementation ✅</li>
+<li>[x] Access to all native YouTube iFrame <a href="https://developers.google.com/youtube/iframe_api_reference">APIs</a> 👩‍💻👨‍💻</li>
+<li>[x] Support for SwiftUI and UIKit 📱</li>
+</ul>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>Check out the example application to see <code>YouTubePlayerKit</code> in action. Simply open the <code>Example/Example.xcodeproj</code> and run the <code>Example</code> scheme.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>To integrate using Apple&rsquo;s <a href="https://swift.org/package-manager/">Swift Package Manager</a>, add the following as a dependency to your <code>Package.swift</code>:</p>
+<pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SvenTiigi/YouTubePlayerKit.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.0.0"</span><span class="p">)</span>
+<span class="p">]</span>
+</code></pre>
+
+<p>Or navigate to your Xcode project then select <code>Swift Packages</code>, click the “+” icon and search for <code>YouTubePlayerKit</code>.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>A YouTube player can be easily rendered when using <code>SwiftUI</code> by declaring a <code><a href="Structs/YouTubePlayerView.html">YouTubePlayerView</a></code>.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+<span class="kd">import</span> <span class="kt">YouTubePlayerKit</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="c1">// YouTubePlayerView with overlay view builder</span>
+        <span class="c1">// which takes in a `YouTubePlayer.State`</span>
+        <span class="kt">YouTubePlayerView</span><span class="p">(</span>
+            <span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span>
+        <span class="p">)</span> <span class="p">{</span> <span class="n">state</span> <span class="k">in</span>
+            <span class="k">switch</span> <span class="n">state</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="o">.</span><span class="nv">idle</span><span class="p">:</span>
+                <span class="kt">ProgressView</span><span class="p">()</span>
+            <span class="k">case</span> <span class="o">.</span><span class="nv">ready</span><span class="p">:</span>
+                <span class="kt">EmptyView</span><span class="p">()</span>
+            <span class="k">case</span> <span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
+                <span class="kt">Text</span><span class="p">(</span><span class="nv">verbatim</span><span class="p">:</span> <span class="s">"YouTube player couldn't be loaded"</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+
+<blockquote>
+<p>Check out the various <code><a href="Structs/YouTubePlayerView.html">YouTubePlayerView</a></code> initializer to place an overlay for a given state.</p>
+</blockquote>
+
+<p>When using <code>UIKit</code> you can make use of the <code><a href="Classes/YouTubePlayerViewController.html">YouTubePlayerViewController</a></code>.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">YouTubePlayerKit</span>
+
+<span class="c1">// Initialize a YouTubePlayerViewController</span>
+<span class="k">let</span> <span class="nv">youTubePlayerViewController</span> <span class="o">=</span> <span class="kt">YouTubePlayerViewController</span><span class="p">(</span>
+    <span class="nv">player</span><span class="p">:</span> <span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span>
+<span class="p">)</span>
+
+<span class="c1">// Optional: Use the `YouTubePlayer` to access the underlying iFrame API</span>
+<span class="n">youTubePlayerViewController</span>
+    <span class="o">.</span><span class="n">player</span>
+    <span class="o">.</span><span class="n">playbackQualityPublisher</span>
+    <span class="o">.</span><span class="n">sink</span> <span class="p">{</span> <span class="n">playbackQuality</span> <span class="k">in</span>
+        <span class="c1">// Print playback quality changes</span>
+        <span class="nf">print</span><span class="p">(</span>
+            <span class="s">"Playback quality changed to"</span><span class="p">,</span> 
+            <span class="n">playbackQuality</span>
+        <span class="p">)</span> 
+    <span class="p">}</span>
+    <span class="o">.</span><span class="nf">store</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">cancellables</span><span class="p">)</span>
+
+<span class="c1">// Present YouTubePlayerViewController</span>
+<span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">youTubePlayerViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+<h2 id='youtubeplayer' class='heading'>YouTubePlayer</h2>
+
+<p>A <code><a href="Classes/YouTubePlayer.html">YouTubePlayer</a></code> is the central object which needs to be passed to every YouTubePlayerView or YouTubePlayerViewController in order to play a certain YouTube video and interact with the underlying YouTube iFrame API. </p>
+
+<p>Therefore, you can easily initialize a <code><a href="Classes/YouTubePlayer.html">YouTubePlayer</a></code> by using a string literal as seen in the previous examples.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">youTubePlayer</span><span class="p">:</span> <span class="kt">YouTubePlayer</span> <span class="o">=</span> <span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span>
+</code></pre>
+
+<p>A <code><a href="Classes/YouTubePlayer.html">YouTubePlayer</a></code> consist of two parts a <code><a href="Classes/YouTubePlayer/Source.html">YouTubePlayer.Source</a></code> and a <code><a href="Classes/YouTubePlayer/Configuration.html">YouTubePlayer.Configuration</a></code>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">youTubePlayer</span> <span class="o">=</span> <span class="kt">YouTubePlayer</span><span class="p">(</span>
+    <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="nf">video</span><span class="p">(</span>
+        <span class="nv">id</span><span class="p">:</span> <span class="s">"psL_5RIBqnY"</span>
+    <span class="p">),</span>
+    <span class="nv">configuration</span><span class="p">:</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span>
+        <span class="nv">autoPlay</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</code></pre>
+<h3 id='source' class='heading'>Source</h3>
+
+<p>The <code><a href="Classes/YouTubePlayer/Source.html">YouTubePlayer.Source</a></code> is a simple enum which allows you to specify which YouTube source should be loaded.</p>
+<pre class="highlight swift"><code><span class="c1">// YouTubePlayer Video Source</span>
+<span class="k">let</span> <span class="nv">videoSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span> <span class="o">=</span> <span class="o">.</span><span class="nf">video</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"psL_5RIBqnY"</span><span class="p">)</span>
+
+<span class="c1">// YouTubePlayer Playlist Source</span>
+<span class="k">let</span> <span class="nv">playlistSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span> <span class="o">=</span> <span class="o">.</span><span class="nf">playlist</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"PLHFlHpPjgk72Si7r1kLGt1_aD3aJDu092"</span><span class="p">)</span>
+
+<span class="c1">// YouTubePlayer Channel Source</span>
+<span class="k">let</span> <span class="nv">channelSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span> <span class="o">=</span> <span class="o">.</span><span class="nf">channel</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"iJustine"</span><span class="p">)</span>
+</code></pre>
+
+<p>Additionally, you can use a URL to initialize a <code><a href="Classes/YouTubePlayer/Source.html">YouTubePlayer.Source</a></code></p>
+<pre class="highlight swift"><code><span class="c1">// Watch URL</span>
+<span class="k">let</span> <span class="nv">watchURLSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span><span class="p">)</span>
+
+<span class="c1">// Share URL</span>
+<span class="k">let</span> <span class="nv">sharedURLSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtu.be/psL_5RIBqnY"</span><span class="p">)</span>
+
+<span class="c1">// Embed URL</span>
+<span class="k">let</span> <span class="nv">embedURLSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtube.com/embed/psL_5RIBqnY"</span><span class="p">)</span>
+
+<span class="c1">// Channel URL</span>
+<span class="k">let</span> <span class="nv">channelURLSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtube.com/c/iJustine"</span><span class="p">)</span>
+</code></pre>
+
+<blockquote>
+<p>When using a URL the <code><a href="Classes/YouTubePlayer/Source.html">YouTubePlayer.Source</a></code> will be optional</p>
+</blockquote>
+<h3 id='configuration' class='heading'>Configuration</h3>
+
+<p>The <code><a href="Classes/YouTubePlayer/Configuration.html">YouTubePlayer.Configuration</a></code> allows you to configure various <a href="https://developers.google.com/youtube/player_parameters">parameters</a> of the underlying YouTube iFrame player.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Configuration</span><span class="p">(</span>
+    <span class="c1">// Disable user interaction</span>
+    <span class="nv">isUserInteractionEnabled</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">// Enable auto play</span>
+    <span class="nv">autoPlay</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="c1">// Disable controls</span>
+    <span class="nv">controls</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="c1">// Enable loop</span>
+    <span class="nv">loop</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">youTubePlayer</span> <span class="o">=</span> <span class="kt">YouTubePlayer</span><span class="p">(</span>
+    <span class="nv">source</span><span class="p">:</span> <span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span><span class="p">,</span>
+    <span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span>
+<span class="p">)</span>
+</code></pre>
+
+<blockquote>
+<p>Check out the <code><a href="Classes/YouTubePlayer/Configuration.html">YouTubePlayer.Configuration</a></code> to get a list of all available parameters.</p>
+</blockquote>
+<h2 id='youtubeplayerapi' class='heading'>YouTubePlayerAPI</h2>
+
+<p>A <code><a href="Classes/YouTubePlayer.html">YouTubePlayer</a></code> instance offers various properties and functions to access the underlying YouTube player iFrame API like accessing the current playback quality, play, pause, seek, etc&hellip;</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">youTubePlayer</span><span class="p">:</span> <span class="kt">YouTubePlayer</span> <span class="o">=</span> <span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span>
+
+<span class="c1">// Play video</span>
+<span class="n">youTubePlayer</span><span class="o">.</span><span class="nf">play</span><span class="p">()</span>
+
+<span class="c1">// Pause video</span>
+<span class="n">youTubePlayer</span><span class="o">.</span><span class="nf">pause</span><span class="p">()</span>
+
+<span class="c1">// Retrieve the duration</span>
+<span class="n">youTubePlayer</span><span class="o">.</span><span class="n">getDuration</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Duration"</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Load a new Video</span>
+<span class="n">youTubePlayer</span><span class="o">.</span><span class="nf">load</span><span class="p">(</span>
+    <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="nf">video</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"0TD96VTf0Xs"</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1">// ...</span>
+</code></pre>
+
+<blockquote>
+<p>Check out the <code><a href="Typealiases.html#/s:16YouTubePlayerKit0abC3APIa">YouTubePlayerAPI</a></code> protocol to get a list of all available functions and properties.</p>
+</blockquote>
+
+<p>When using <code>SwiftUI</code> simply store the <code><a href="Classes/YouTubePlayer.html">YouTubePlayer</a></code> on your View.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+<span class="kd">import</span> <span class="kt">YouTubePlayerKit</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">youTubePlayer</span><span class="p">:</span> <span class="kt">YouTubePlayer</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span>
+        <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="nf">video</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"0TD96VTf0Xs"</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span> <span class="p">{</span>
+            <span class="kt">YouTubePlayerView</span><span class="p">(</span>
+                <span class="k">self</span><span class="o">.</span><span class="n">youTubePlayer</span>
+            <span class="p">)</span>
+            <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span>
+            <span class="kt">Button</span><span class="p">(</span>
+                <span class="nv">action</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">youTubePlayer</span><span class="o">.</span><span class="n">play</span><span class="p">,</span>
+                <span class="nv">label</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="kt">Text</span><span class="p">(</span><span class="s">"Play"</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+<h2 id='credits' class='heading'>Credits</h2>
+
+<ul>
+<li><a href="https://github.com/youtube/youtube-ios-player-helper">youtube/youtube-ios-player-helper</a></li>
+</ul>
+<h2 id='license' class='heading'>License</h2>
+<pre class="highlight plaintext"><code>YouTubePlayerKit
+Copyright (c) 2021 Sven Tiigi sven.tiigi@gmail.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
