@@ -50,6 +50,9 @@
                 <a href="Classes/YouTubePlayer/Perspective360Degree.html">– Perspective360Degree</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/YouTubePlayer/PlaybackMetadata.html">– PlaybackMetadata</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/YouTubePlayer/PlaybackQuality.html">– PlaybackQuality</a>
               </li>
               <li class="nav-group-task">
@@ -138,13 +141,17 @@
 <h1 align="center">YouTubePlayerKit</h1>
 
 <p align="center">
-    A Swift Package to easily play YouTube videos on iOS
+    A Swift Package to easily play YouTube videos
 </p>
 
 <p align="center">
-   <a href="https://github.com/apple/swift-package-manager">
-      <img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="SPM">
+   <a href="https://github.com/SvenTiigi/YouTubePlayerKit/actions/workflows/ci.yml">
+       <img src="https://github.com/SvenTiigi/YouTubePlayerKit/actions/workflows/ci.yml/badge.svg" alt="CI status">
    </a>
+   <a href="https://sventiigi.github.io/YouTubePlayerKit">
+      <img src="https://github.com/SvenTiigi/YouTubePlayerKit/blob/gh-pages/badge.svg" alt="Documentation">
+   </a>
+   <img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS-lightgrey" alt="Platform">
    <a href="https://twitter.com/SvenTiigi/">
       <img src="https://img.shields.io/badge/Twitter-@SvenTiigi-blue.svg?style=flat" alt="Twitter">
    </a>
@@ -222,23 +229,24 @@
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">UIKit</span>
 <span class="kd">import</span> <span class="kt">YouTubePlayerKit</span>
 
+<span class="c1">// Initialize a YouTubePlayer</span>
+<span class="k">let</span> <span class="nv">youTubePlayer</span> <span class="o">=</span> <span class="kt">YouTubePlayer</span><span class="p">(</span>
+    <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="nf">video</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"psL_5RIBqnY"</span><span class="p">)</span>
+<span class="p">)</span>
 <span class="c1">// Initialize a YouTubePlayerViewController</span>
 <span class="k">let</span> <span class="nv">youTubePlayerViewController</span> <span class="o">=</span> <span class="kt">YouTubePlayerViewController</span><span class="p">(</span>
-    <span class="nv">player</span><span class="p">:</span> <span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span>
+    <span class="nv">player</span><span class="p">:</span> <span class="n">youTubePlayer</span>
 <span class="p">)</span>
 
-<span class="c1">// Optional: Use the `YouTubePlayer` to access the underlying iFrame API</span>
-<span class="n">youTubePlayerViewController</span>
-    <span class="o">.</span><span class="n">player</span>
-    <span class="o">.</span><span class="n">playbackQualityPublisher</span>
-    <span class="o">.</span><span class="n">sink</span> <span class="p">{</span> <span class="n">playbackQuality</span> <span class="k">in</span>
-        <span class="c1">// Print playback quality changes</span>
-        <span class="nf">print</span><span class="p">(</span>
-            <span class="s">"Playback quality changed to"</span><span class="p">,</span> 
-            <span class="n">playbackQuality</span>
-        <span class="p">)</span> 
+<span class="c1">// Example: Access the underlying iFrame API via the `YouTubePlayer` instance</span>
+<span class="n">youTubePlayer</span><span class="o">.</span><span class="n">getPlaybackMetadata</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="k">let</span> <span class="nv">metadata</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Video title"</span><span class="p">,</span> <span class="n">metadata</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Failed to retrieve metadata"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
     <span class="p">}</span>
-    <span class="o">.</span><span class="nf">store</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">cancellables</span><span class="p">)</span>
+<span class="p">}</span>
 
 <span class="c1">// Present YouTubePlayerViewController</span>
 <span class="k">self</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="n">youTubePlayerViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
@@ -251,11 +259,9 @@
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">youTubePlayer</span><span class="p">:</span> <span class="kt">YouTubePlayer</span> <span class="o">=</span> <span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span>
 </code></pre>
 
-<p>A <code><a href="Classes/YouTubePlayer.html">YouTubePlayer</a></code> consist of two parts a <code><a href="Classes/YouTubePlayer/Source.html">YouTubePlayer.Source</a></code> and a <code><a href="Classes/YouTubePlayer/Configuration.html">YouTubePlayer.Configuration</a></code>.</p>
+<p>A <code><a href="Classes/YouTubePlayer.html">YouTubePlayer</a></code> generally consist of a <code><a href="Classes/YouTubePlayer/Source.html">YouTubePlayer.Source</a></code> and a <code><a href="Classes/YouTubePlayer/Configuration.html">YouTubePlayer.Configuration</a></code>.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">youTubePlayer</span> <span class="o">=</span> <span class="kt">YouTubePlayer</span><span class="p">(</span>
-    <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="nf">video</span><span class="p">(</span>
-        <span class="nv">id</span><span class="p">:</span> <span class="s">"psL_5RIBqnY"</span>
-    <span class="p">),</span>
+    <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="nf">video</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"psL_5RIBqnY"</span><span class="p">),</span>
     <span class="nv">configuration</span><span class="p">:</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span>
         <span class="nv">autoPlay</span><span class="p">:</span> <span class="kc">true</span>
     <span class="p">)</span>
@@ -275,17 +281,7 @@
 </code></pre>
 
 <p>Additionally, you can use a URL to initialize a <code><a href="Classes/YouTubePlayer/Source.html">YouTubePlayer.Source</a></code></p>
-<pre class="highlight swift"><code><span class="c1">// Watch URL</span>
-<span class="k">let</span> <span class="nv">watchURLSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span><span class="p">)</span>
-
-<span class="c1">// Share URL</span>
-<span class="k">let</span> <span class="nv">sharedURLSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtu.be/psL_5RIBqnY"</span><span class="p">)</span>
-
-<span class="c1">// Embed URL</span>
-<span class="k">let</span> <span class="nv">embedURLSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtube.com/embed/psL_5RIBqnY"</span><span class="p">)</span>
-
-<span class="c1">// Channel URL</span>
-<span class="k">let</span> <span class="nv">channelURLSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtube.com/c/iJustine"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">urlSource</span><span class="p">:</span> <span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt">Source</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span><span class="p">)</span>
 </code></pre>
 
 <blockquote>
@@ -325,15 +321,21 @@
 <span class="c1">// Pause video</span>
 <span class="n">youTubePlayer</span><span class="o">.</span><span class="nf">pause</span><span class="p">()</span>
 
-<span class="c1">// Retrieve the duration</span>
-<span class="n">youTubePlayer</span><span class="o">.</span><span class="n">getDuration</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
-    <span class="nf">print</span><span class="p">(</span><span class="s">"Duration"</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
-<span class="p">}</span>
-
 <span class="c1">// Load a new Video</span>
 <span class="n">youTubePlayer</span><span class="o">.</span><span class="nf">load</span><span class="p">(</span>
     <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="nf">video</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"0TD96VTf0Xs"</span><span class="p">)</span>
 <span class="p">)</span>
+
+<span class="c1">// Subscribe to PlaybackQuality Publisher</span>
+<span class="n">youTubePlayer</span>
+    <span class="o">.</span><span class="n">playbackQualityPublisher</span>
+    <span class="o">.</span><span class="n">sink</span> <span class="p">{</span> <span class="n">playbackQuality</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span>
+            <span class="s">"Playback quality changed"</span><span class="p">,</span>
+            <span class="n">playbackQuality</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+    <span class="o">.</span><span class="nf">store</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="o">&amp;</span><span class="k">self</span><span class="o">.</span><span class="n">cancellables</span><span class="p">)</span>
 
 <span class="c1">// ...</span>
 </code></pre>
@@ -348,7 +350,7 @@
 
 <span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
 
-    <span class="k">let</span> <span class="nv">youTubePlayer</span><span class="p">:</span> <span class="kt">YouTubePlayer</span> <span class="o">=</span> <span class="o">.</span><span class="nf">init</span><span class="p">(</span>
+    <span class="k">let</span> <span class="nv">youTubePlayer</span> <span class="o">=</span> <span class="kt">YouTubePlayer</span><span class="p">(</span>
         <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="nf">video</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="s">"0TD96VTf0Xs"</span><span class="p">)</span>
     <span class="p">)</span>
 
@@ -400,7 +402,7 @@ THE SOFTWARE.
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-22)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
         </section>
       </article>

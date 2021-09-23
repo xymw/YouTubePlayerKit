@@ -51,6 +51,9 @@
                 <a href="../Classes/YouTubePlayer/Perspective360Degree.html">– Perspective360Degree</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer/PlaybackMetadata.html">– PlaybackMetadata</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/YouTubePlayer/PlaybackQuality.html">– PlaybackQuality</a>
               </li>
               <li class="nav-group-task">
@@ -416,6 +419,47 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Perspective360Degree</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BPlaybackMetadata"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+PlaybackMetadata" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BPlaybackMetadata"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+PlaybackMetadata</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C16PlaybackMetadataV"></a>
+                    <a name="//apple_ref/swift/Struct/PlaybackMetadata" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C16PlaybackMetadataV">PlaybackMetadata</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YouTubePlayer PlaybackMetadata</p>
+
+                        <a href="../Classes/YouTubePlayer/PlaybackMetadata.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">PlaybackMetadata</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
 
                         </div>
                       </div>
@@ -1552,9 +1596,9 @@ so that they play back in an order different from the one that the playlist crea
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16YouTubePlayerKit0abC0C15getPlayistIndex10completionyys6ResultOySiAA0abC8APIErrorVGc_tF"></a>
-                    <a name="//apple_ref/swift/Method/getPlayistIndex(completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C15getPlayistIndex10completionyys6ResultOySiAA0abC8APIErrorVGc_tF">getPlayistIndex(completion:<wbr>)</a>
+                    <a name="/s:16YouTubePlayerKit0abC0C16getPlaylistIndex10completionyys6ResultOySiAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getPlaylistIndex(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C16getPlaylistIndex10completionyys6ResultOySiAA0abC8APIErrorVGc_tF">getPlaylistIndex(completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1569,7 +1613,7 @@ so that they play back in an order different from the one that the playlist crea
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPlayistIndex</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPlaylistIndex</span><span class="p">(</span>
     <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Int</span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
 <span class="p">)</span></code></pre>
 
@@ -2123,6 +2167,54 @@ Accepts an integer between 0 and 100</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C19getPlaybackMetadata10completionyys6ResultOyAC0fG0VAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getPlaybackMetadata(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C19getPlaybackMetadata10completionyys6ResultOyAC0fG0VAA0abC8APIErrorVGc_tF">getPlaybackMetadata(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the current PlaybackMetadata</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPlaybackMetadata</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/PlaybackMetadata.html">PlaybackMetadata</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -2420,7 +2512,7 @@ Accepts an integer between 0 and 100</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-22)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
         </section>
       </article>

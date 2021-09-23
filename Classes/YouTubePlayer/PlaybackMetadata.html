@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PreferenceKey Structure Reference</title>
+    <title>PlaybackMetadata Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/PreferenceKey" class="dashAnchor"></a>
-    <a title="PreferenceKey Structure Reference"></a>
+    <a name="//apple_ref/swift/Struct/PlaybackMetadata" class="dashAnchor"></a>
+    <a title="PlaybackMetadata Structure Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../../index.html"> Docs</a> (100% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../../index.html"> Reference</a>
         <img id="carat" src="../../img/carat.png" />
-        PreferenceKey Structure Reference
+        PlaybackMetadata Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -132,26 +132,35 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>PreferenceKey</h1>
+            <h1>PlaybackMetadata</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">PreferenceKey</span> <span class="p">:</span> <span class="kt">SwiftUI</span><span class="o">.</span><span class="kt">PreferenceKey</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">PlaybackMetadata</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
 
                 </div>
               </div>
-            <p>A YouTubePlayer  produced by a SwiftUI view</p>
+            <p>The YouTubePlayer PlaybackMetadata</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Properties"></a>
+                  <h3 class="section-name"><p>Properties</p>
+</h3>
+                </div>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16YouTubePlayerKit0abC0C13PreferenceKeyV12defaultValueACSgvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/defaultValue" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C13PreferenceKeyV12defaultValueACSgvpZ">defaultValue</a>
+                    <a name="/s:16YouTubePlayerKit0abC0C16PlaybackMetadataV5titleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/title" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C16PlaybackMetadataV5titleSSvp">title</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -159,14 +168,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The default value of the preference.</p>
+                        <p>The title of the playback/video</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">defaultValue</span><span class="p">:</span> <span class="kt"><a href="../../Classes/YouTubePlayer.html">YouTubePlayer</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -176,9 +185,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16YouTubePlayerKit0abC0C13PreferenceKeyV6reduce5value9nextValueyACSgz_AIyXEtFZ"></a>
-                    <a name="//apple_ref/swift/Method/reduce(value:nextValue:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C13PreferenceKeyV6reduce5value9nextValueyACSgz_AIyXEtFZ">reduce(value:<wbr>nextValue:<wbr>)</a>
+                    <a name="/s:16YouTubePlayerKit0abC0C16PlaybackMetadataV6authorSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/author" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C16PlaybackMetadataV6authorSSSgvp">author</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -186,17 +195,56 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Combines a sequence of values by modifying the previously-accumulated
-value with the result of a closure that provides the next value.</p>
+                        <p>The optional author/creator of the playback/video</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reduce</span><span class="p">(</span>
-    <span class="nv">value</span><span class="p">:</span> <span class="k">inout</span> <span class="kt"><a href="../../Classes/YouTubePlayer.html">YouTubePlayer</a></span><span class="p">?,</span>
-    <span class="nv">nextValue</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/YouTubePlayer.html">YouTubePlayer</a></span><span class="p">?</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">author</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializer"></a>
+                <a name="//apple_ref/swift/Section/Initializer" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initializer"></a>
+                  <h3 class="section-name"><p>Initializer</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C16PlaybackMetadataV5title6authorAESS_SSSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(title:author:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C16PlaybackMetadataV5title6authorAESS_SSSgtcfc">init(title:<wbr>author:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new instance of <code>YouTubePlayer.PlaybackMetadata</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="nv">author</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span></code></pre>
 
                         </div>
@@ -208,24 +256,24 @@ value with the result of a closure that provides the next value.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>value</em>
+                                <em>title</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The value accumulated through previous calls to this method.</p>
+                                  <p>The title of the playback/video</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>nextValue</em>
+                                <em>author</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>A closure that returns the next value in the sequence.</p>
+                                  <p>The optional author/creator of the playback/video</p>
                                 </div>
                               </td>
                             </tr>
