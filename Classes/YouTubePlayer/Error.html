@@ -69,6 +69,12 @@
                 <a href="../../Classes/YouTubePlayer/State.html">– State</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Classes.html#/YouTubePlayerBaseViewController">YouTubePlayerBaseViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes.html#/c:@M@YouTubePlayerKit@objc(cs)YouTubePlayerBaseViewController">YouTubePlayerBaseViewController</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Classes/YouTubePlayerViewController.html">YouTubePlayerViewController</a>
               </li>
             </ul>
@@ -136,7 +142,7 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Error</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">CaseIterable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Error</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span></code></pre>
 
                 </div>
               </div>
@@ -146,6 +152,60 @@
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C5ErrorO11setupFailedyAEsAD_pcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/setupFailed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C5ErrorO11setupFailedyAEsAD_pcAEmF">setupFailed(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Player setup failed with Error</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">setupFailed</span><span class="p">(</span><span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C5ErrorO21iFrameAPIFailedToLoadyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/iFrameAPIFailedToLoad" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C5ErrorO21iFrameAPIFailedToLoadyA2EmF">iFrameAPIFailedToLoad</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YouTube iFrame API JavaScript failed to load</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iFrameAPIFailedToLoad</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -168,7 +228,7 @@ or if the video ID contains invalid characters, such as exclamation points or as
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidSource</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidSource</span></code></pre>
 
                         </div>
                       </div>
@@ -196,7 +256,7 @@ or another error related to the HTML5 player has occurred.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">html5NotSupported</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">html5NotSupported</span></code></pre>
 
                         </div>
                       </div>
@@ -224,7 +284,7 @@ This error occurs when a video has been removed (for any reason) or has been mar
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notFound</span> <span class="o">=</span> <span class="mi">100</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notFound</span></code></pre>
 
                         </div>
                       </div>
@@ -251,61 +311,7 @@ This error occurs when a video has been removed (for any reason) or has been mar
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">embeddedVideoPlayingNotAllowed</span> <span class="o">=</span> <span class="mi">101</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16YouTubePlayerKit0abC0C5ErrorO11setupFailedyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/setupFailed" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C5ErrorO11setupFailedyA2EmF">setupFailed</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Player setup failed</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">setupFailed</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16YouTubePlayerKit0abC0C5ErrorO21iFrameAPIFailedToLoadyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/iFrameAPIFailedToLoad" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C5ErrorO21iFrameAPIFailedToLoadyA2EmF">iFrameAPIFailedToLoad</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The YouTube iFrame API JavaScript failed to load</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">iFrameAPIFailedToLoad</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">embeddedVideoPlayingNotAllowed</span></code></pre>
 
                         </div>
                       </div>
@@ -317,7 +323,7 @@ This error occurs when a video has been removed (for any reason) or has been mar
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-23)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
         </section>
       </article>
