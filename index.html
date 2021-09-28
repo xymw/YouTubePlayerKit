@@ -91,9 +91,6 @@
                 <a href="Protocols/YouTubePlayerEventAPI.html">YouTubePlayerEventAPI</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/YouTubePlayerLoadAPI.html">YouTubePlayerLoadAPI</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Protocols/YouTubePlayerPlaybackAPI.html">YouTubePlayerPlaybackAPI</a>
               </li>
               <li class="nav-group-task">
@@ -101,6 +98,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/YouTubePlayerPlaylistAPI.html">YouTubePlayerPlaylistAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/YouTubePlayerQueueingAPI.html">YouTubePlayerQueueingAPI</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/YouTubePlayerVideoAPI.html">YouTubePlayerVideoAPI</a>
@@ -196,7 +196,7 @@
 
 <p>To integrate using Apple&rsquo;s <a href="https://swift.org/package-manager/">Swift Package Manager</a>, add the following as a dependency to your <code>Package.swift</code>:</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SvenTiigi/YouTubePlayerKit.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.0.0"</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SvenTiigi/YouTubePlayerKit.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.1.0"</span><span class="p">)</span>
 <span class="p">]</span>
 </code></pre>
 
@@ -376,18 +376,30 @@
 <pre class="highlight swift"><code><span class="c1">// Retrieve a number between 0 and 1 that specifies the percentage of the video that the player shows as buffered</span>
 <span class="n">youTubePlayer</span><span class="o">.</span><span class="n">getVideoLoadedFraction</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">}</span>
 
+<span class="c1">// A Publisher that emits a number between 0 and 1 that specifies the percentage of the video that the player shows as buffered</span>
+<span class="n">youTubePlayer</span><span class="o">.</span><span class="nf">videoLoadedFractionPublisher</span><span class="p">()</span>
+
 <span class="c1">// Retrieve the PlaybackState of the player video</span>
 <span class="n">youTubePlayer</span><span class="o">.</span><span class="n">getPlaybackState</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">}</span>
 
 <span class="c1">// Retrieve the elapsed time in seconds since the video started playing</span>
 <span class="n">youTubePlayer</span><span class="o">.</span><span class="n">getCurrentTime</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">}</span>
 
+<span class="c1">/// A Publisher that emits the current elapsed time in seconds since the video started playing</span>
+<span class="n">youTubePlayer</span><span class="o">.</span><span class="nf">currentTimePublisher</span><span class="p">()</span>
+
 <span class="c1">// Retrieve the current PlaybackMetadata</span>
 <span class="n">youTubePlayer</span><span class="o">.</span><span class="n">getPlaybackMetadata</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">}</span>
+
+<span class="c1">// A Publisher that emits the current PlaybackMetadata</span>
+<span class="n">youTubePlayer</span><span class="o">.</span><span class="n">playbackMetadataPublisher</span>
 </code></pre>
-<h4 id='load-video' class='heading'>Load video</h4>
+<h4 id='load-cue-video' class='heading'>Load/Cue video</h4>
 <pre class="highlight swift"><code><span class="c1">// Load a new video from source</span>
 <span class="n">youTubePlayer</span><span class="o">.</span><span class="nf">load</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span><span class="p">))</span>
+
+<span class="c1">// Cue a video from source</span>
+<span class="n">youTubePlayer</span><span class="o">.</span><span class="nf">cue</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="s">"https://youtube.com/watch?v=psL_5RIBqnY"</span><span class="p">))</span>
 </code></pre>
 <h4 id='update-configuration' class='heading'>Update Configuration</h4>
 <pre class="highlight swift"><code><span class="c1">// Update the YouTubePlayer Configuration</span>
@@ -421,6 +433,9 @@
 <h4 id='retrieving-video-information' class='heading'>Retrieving video information</h4>
 <pre class="highlight swift"><code><span class="c1">// Retrieve the duration in seconds of the currently playing video</span>
 <span class="n">youTubePlayer</span><span class="o">.</span><span class="n">getDuration</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">}</span>
+
+<span class="c1">// A Publisher that emits the duration in seconds of the currently playing video</span>
+<span class="n">youTubePlayer</span><span class="o">.</span><span class="n">durationPublisher</span>
 
 <span class="c1">// Retrieve the YouTube.com URL for the currently loaded/playing video</span>
 <span class="n">youTubePlayer</span><span class="o">.</span><span class="n">getVideoURL</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">}</span>
@@ -505,7 +520,7 @@ THE SOFTWARE.
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-26)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-28)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
         </section>
       </article>
