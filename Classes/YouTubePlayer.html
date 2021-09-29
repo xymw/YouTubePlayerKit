@@ -48,6 +48,9 @@
                 <a href="../Classes/YouTubePlayer/Error.html">– Error</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/YouTubePlayer/Information.html">– Information</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/YouTubePlayer/Perspective360Degree.html">– Perspective360Degree</a>
               </li>
               <li class="nav-group-task">
@@ -194,7 +197,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@Published</span>
-<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">source</span><span class="p">:</span> <span class="kt"><a href="../Classes/YouTubePlayer/Source.html">Source</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">source</span><span class="p">:</span> <span class="kt"><a href="../Classes/YouTubePlayer/Source.html">Source</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -222,7 +225,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@Published</span>
-<span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/YouTubePlayer/Configuration.html">Configuration</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/YouTubePlayer/Configuration.html">Configuration</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -384,6 +387,47 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Error</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/YouTubePlayer%2BInformation"></a>
+                <a name="//apple_ref/swift/Section/YouTubePlayer+Information" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/YouTubePlayer%2BInformation"></a>
+                  <h3 class="section-name"><p>YouTubePlayer+Information</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C11InformationV"></a>
+                    <a name="//apple_ref/swift/Struct/Information" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C11InformationV">Information</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The YouTubePlayer Information</p>
+
+                        <a href="../Classes/YouTubePlayer/Information.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Information</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
 
                         </div>
                       </div>
@@ -2286,6 +2330,108 @@ Accepts an integer between 0 and 100</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C17showStatsForNerdsyyF"></a>
+                    <a name="//apple_ref/swift/Method/showStatsForNerds()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C17showStatsForNerdsyyF">showStatsForNerds()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Show Stats for Nerds which displays additional video information</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">showStatsForNerds</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C17hideStatsForNerdsyyF"></a>
+                    <a name="//apple_ref/swift/Method/hideStatsForNerds()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C17hideStatsForNerdsyyF">hideStatsForNerds()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hide Stats for Nerds</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hideStatsForNerds</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16YouTubePlayerKit0abC0C14getInformation10completionyys6ResultOyAC0F0VAA0abC8APIErrorVGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getInformation(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16YouTubePlayerKit0abC0C14getInformation10completionyys6ResultOyAC0F0VAA0abC8APIErrorVGc_tF">getInformation(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve the YouTubePlayer Information</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getInformation</span><span class="p">(</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">YouTubePlayer</span><span class="o">.</span><span class="kt"><a href="../Classes/YouTubePlayer/Information.html">Information</a></span><span class="p">,</span> <span class="kt"><a href="../Structs/YouTubePlayerAPIError.html">YouTubePlayerAPIError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:16YouTubePlayerKit0abC0C11getDuration10completionyys6ResultOySdAA0abC8APIErrorVGc_tF"></a>
                     <a name="//apple_ref/swift/Method/getDuration(completion:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:16YouTubePlayerKit0abC0C11getDuration10completionyys6ResultOySdAA0abC8APIErrorVGc_tF">getDuration(completion:<wbr>)</a>
@@ -2567,7 +2713,7 @@ Accepts an integer between 0 and 100</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-28)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="noopener" rel="external"></a>. All rights reserved. (Last updated: 2021-09-29)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="noopener" rel="external">jazzy ♪♫ v0.14.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="noopener" rel="external">Realm</a> project.</p>
         </section>
       </article>
