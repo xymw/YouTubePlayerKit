@@ -4,14 +4,13 @@ import WebKit
 // MARK: - YouTubePlayerWebView+WKNavigationDelegate
 
 extension YouTubePlayerWebView: WKNavigationDelegate {
-    
     /// WebView decide policy for NavigationAction
     /// - Parameters:
     ///   - webView: The WKWebView
     ///   - navigationAction: The WKNavigationAction
     ///   - decisionHandler: The decision handler
-    func webView(
-        _ webView: WKWebView,
+    public func webView(
+        _: WKWebView,
         decidePolicyFor navigationAction: WKNavigationAction,
         decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
     ) {
@@ -23,14 +22,14 @@ extension YouTubePlayerWebView: WKNavigationDelegate {
         // Check if a JavaScriptEvent can be initialized from request URL
         if let javaScriptEvent = YouTubePlayer.JavaScriptEvent(url: url) {
             // Handle JavaScriptEvent
-            self.handle(
+            handle(
                 javaScriptEvent: javaScriptEvent
             )
             // Cancel navigation action
             return decisionHandler(.cancel)
         }
         // Check if Request URL host is equal to origin URL host
-        if url.host?.lowercased() == self.originURL?.host?.lowercased() {
+        if url.host?.lowercased() == originURL?.host?.lowercased() {
             // Allow navigation action
             return decisionHandler(.allow)
         }
@@ -57,30 +56,28 @@ extension YouTubePlayerWebView: WKNavigationDelegate {
             }
         }
         // Open URL
-        self.open(url: url)
+        open(url: url)
         // Cancel navigation action
         decisionHandler(.cancel)
     }
-    
+
     /// Invoked when the web view's web content process is terminated.
     /// - Parameter webView: The web view whose underlying web content process was terminated.
-    func webViewWebContentProcessDidTerminate(
-        _ webView: WKWebView
+    public func webViewWebContentProcessDidTerminate(
+        _: WKWebView
     ) {
         // Send error state
-        self.playerStateSubject.send(
+        playerStateSubject.send(
             .error(
                 .webContentProcessDidTerminate
             )
         )
     }
-    
 }
 
 // MARK: - YouTubePlayerWebView+validURLRegularExpressions
 
 private extension YouTubePlayerWebView {
-    
     /// The valid URL RegularExpressions
     /// Source: https://github.com/youtube/youtube-ios-player-helper/blob/ff5991e6e3188867fe2738aa92913a37127f8f1d/Classes/YTPlayerView.m#L59
     static let validURLRegularExpressions: [NSRegularExpression] = [
@@ -96,5 +93,4 @@ private extension YouTubePlayerWebView {
             options: .caseInsensitive
         )
     }
-    
 }
