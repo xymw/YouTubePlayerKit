@@ -59,7 +59,7 @@ public final class YouTubePlayerWebView: WKWebView {
         self.player = player
         // Super init
         super.init(
-            frame: .zero,
+            frame: CGRect(x: 0, y: 0, width: 640, height: 360),
             configuration: .youTubePlayer
         )
         // Setup
