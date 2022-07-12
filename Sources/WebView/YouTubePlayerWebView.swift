@@ -52,7 +52,7 @@ public final class YouTubePlayerWebView: WKWebView {
 
     /// Creates a new instance of `YouTubePlayer.WebView`
     /// - Parameter player: The YouTubePlayer
-    init(
+    public init(
         player: YouTubePlayer
     ) {
         // Set player
